@@ -1,0 +1,19 @@
+.header {
+  height: 7rem;
+  font-size: $default-font-size;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media only screen and (max-width: $screen-small) {
+    flex-direction: column;
+    gap: 4rem;
+    height: auto;
+  }
+  & > .logo-container {
+    height: 4rem;
+    img {
+      height: 100%;
+    }
+  }
+}

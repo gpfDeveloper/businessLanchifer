@@ -1,0 +1,13 @@
+.close {
+  display: none !important;
+}
+
+.open {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.active {
+  background-color: $color-primary;
+  color: white;
+}

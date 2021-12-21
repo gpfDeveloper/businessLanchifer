@@ -1,0 +1,14 @@
+.card {
+  padding: 2rem;
+  box-shadow: $shadow-light;
+  background-color: white;
+  color: $color-grey-dark;
+  &--dark {
+    background-color: $color-grey-dark;
+    color: white;
+  }
+  &--primary {
+    background-color: $color-primary;
+    color: white;
+  }
+}

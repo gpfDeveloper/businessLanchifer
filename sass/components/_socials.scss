@@ -1,0 +1,14 @@
+.social__items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  svg {
+    height: 3rem;
+    width: 3rem;
+    fill: #ccc;
+    cursor: pointer;
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}
