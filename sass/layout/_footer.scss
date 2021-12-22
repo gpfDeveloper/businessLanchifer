@@ -7,6 +7,10 @@
   .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @media only screen and (max-width: $screen-large) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4rem;
+    }
     @media only screen and (max-width: $screen-small) {
       grid-template-columns: 1fr;
       gap: 4rem;
@@ -78,7 +82,8 @@
           outline: 1px solid $color-primary;
         }
       }
-      a,button {
+      a,
+      button {
         width: 100%;
       }
     }

@@ -5,7 +5,7 @@
     height: auto;
     padding: 4rem 0;
   }
-  background-image: url("/imgs/hero.jpg");
+  background-image: url('/imgs/hero.jpg');
   background-size: cover;
   .container {
     display: flex;
@@ -38,12 +38,14 @@
 .subhero {
   font-size: $default-font-size;
   &__items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media only screen and (max-width: $screen-large) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
+    }
     @media only screen and (max-width: $screen-small) {
-      margin: 4rem 0;
-      flex-direction: column;
+      grid-template-columns: 1fr;
     }
   }
   &__item {
@@ -87,7 +89,7 @@
   h2 {
     color: $color-grey-dark2;
   }
-  background-image: url("/imgs/bg_getInTouch.jpg");
+  background-image: url('/imgs/bg_getInTouch.jpg');
   background-repeat: no-repeat;
   background-position: 60% 100%;
 }
@@ -100,8 +102,10 @@
     display: flex;
     gap: 4rem;
     align-items: center;
-    @media only screen and (max-width: $screen-small) {
+    @media only screen and (max-width: $screen-medium) {
       flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
   &__left {
@@ -135,6 +139,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 2rem;
+    @media only screen and (max-width: $screen-large) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @media only screen and (max-width: $screen-small) {
       grid-template-columns: 1fr;
     }
@@ -165,7 +172,7 @@
   font-size: $default-font-size;
   padding: 2rem 0;
   height: 84rem;
-  @media only screen and (max-width: $screen-small) {
+  @media only screen and (max-width: $screen-medium) {
     height: auto;
     padding: 8rem 0;
   }
@@ -187,19 +194,19 @@
       max-width: 60rem;
       color: $color-grey-dark2;
     }
-    @media only screen and (max-width: $screen-small) {
+    @media only screen and (max-width: $screen-medium) {
       align-items: center;
       text-align: center;
     }
   }
   &__right {
-    @media only screen and (max-width: $screen-small) {
+    @media only screen and (max-width: $screen-medium) {
       display: none;
     }
     flex: 1 1 100%;
     height: 100%;
     position: relative;
-    background-image: url("/imgs/dots.jpg");
+    background-image: url('/imgs/dots.jpg');
   }
   &__rect {
     height: 20rem;
@@ -228,7 +235,7 @@
 }
 
 .contact {
-  background-image: url("/imgs/bg_contact.jpg");
+  background-image: url('/imgs/bg_contact.jpg');
   background-size: cover;
   background-position: center;
   font-size: $default-font-size;
@@ -236,6 +243,10 @@
   padding: 8rem 0;
   text-align: center;
   gap: 1rem;
+  @media only screen and (max-width: $screen-larger) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   &__form {
     margin-top: 3rem;
   }
@@ -244,6 +255,11 @@
 .blog {
   padding: 8rem 0;
   font-size: $default-font-size;
+  @media only screen and (max-width: $screen-larger) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -256,13 +272,16 @@
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    @media only screen and (max-width: $screen-small) {
+    @media only screen and (max-width: $screen-medium) {
       flex-direction: column;
     }
   }
   &__item {
     &--mid {
       margin-top: -2rem;
+      @media only screen and (max-width: $screen-medium) {
+        margin-top: 6rem;
+      }
     }
     position: relative;
     display: flex;
